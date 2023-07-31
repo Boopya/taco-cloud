@@ -18,9 +18,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.tacocloud.Ingredient.Type;
 
-import lombok.extern.slf4j.Slf4j;
-
-@Slf4j
 @Controller
 @RequestMapping("/design")
 @SessionAttributes("order")
@@ -54,7 +51,7 @@ public class DesignTacoController {
         Type[] types = Ingredient.Type.values();
         for (Type type : types) {
             model.addAttribute(type.toString().toLowerCase(),
-            filterByType(ingredients, type));
+                    filterByType(ingredients, type));
         }
 
         return "design";
@@ -67,19 +64,15 @@ public class DesignTacoController {
             return "design";
         }
 
-        // Save the taco design...
-        // We'll do this in chapter 3
-        // log.info("Processing design :" + design);
-
         Taco saved = designRepo.save(design);
         order.addDesign(saved);
 
         return "redirect:/orders/current";
     }
- 
+
     private List<Ingredient> filterByType(List<Ingredient> ingredients, Type type) {
         return ingredients.stream()
-            .filter(x -> x.getType().equals(type))
-            .collect(Collectors.toList());
+                .filter(x -> x.getType().equals(type))
+                .collect(Collectors.toList());
     }
 }
