@@ -35,6 +35,15 @@ public class DesignTacoController {
         this.ingredientRepo = ingredientRepo;
         this.designRepo = designRepo;
     }
+
+    @ModelAttribute(name = "order")
+    public Order order() {
+        return new Order();
+    }
+
+    @ModelAttribute(name = "taco")
+    public Taco taco() {
+        return new Taco();
     }
 
     @GetMapping
