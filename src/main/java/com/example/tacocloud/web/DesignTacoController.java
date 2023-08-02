@@ -1,4 +1,4 @@
-package com.example.tacocloud;
+package com.example.tacocloud.web;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,7 +16,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.example.tacocloud.Ingredient;
+import com.example.tacocloud.Order;
+import com.example.tacocloud.Taco;
 import com.example.tacocloud.Ingredient.Type;
+import com.example.tacocloud.data.IngredientRepository;
+import com.example.tacocloud.data.TacoRepository;
 
 @Controller
 @RequestMapping("/design")

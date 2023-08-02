@@ -1,4 +1,4 @@
-package com.example.tacocloud;
+package com.example.tacocloud.web;
 
 import javax.validation.Valid;
 
@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.bind.support.SessionStatus;
+
+import com.example.tacocloud.Order;
+import com.example.tacocloud.data.OrderRepository;
 
 @Controller
 @RequestMapping("/orders")

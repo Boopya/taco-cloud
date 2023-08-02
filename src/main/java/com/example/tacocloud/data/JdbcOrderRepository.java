@@ -1,4 +1,4 @@
-package com.example.tacocloud;
+package com.example.tacocloud.data;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -10,6 +10,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.stereotype.Repository;
 
+import com.example.tacocloud.Order;
+import com.example.tacocloud.Taco;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Repository

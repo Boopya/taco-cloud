@@ -1,5 +1,6 @@
-package com.example.tacocloud;
+package com.example.tacocloud.data;
 
+import com.example.tacocloud.Ingredient;
 
 public interface IngredientRepository {
     

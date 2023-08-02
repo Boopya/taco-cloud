@@ -1,4 +1,4 @@
-package com.example.tacocloud;
+package com.example.tacocloud.data;
 
 import java.sql.Timestamp;
 import java.sql.Types;
@@ -11,6 +11,9 @@ import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
 import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.jdbc.support.KeyHolder;
 import org.springframework.stereotype.Repository;
+
+import com.example.tacocloud.Ingredient;
+import com.example.tacocloud.Taco;
 
 @Repository
 public class JdbcTacoRepository implements TacoRepository {

@@ -1,4 +1,4 @@
-package com.example.tacocloud;
+package com.example.tacocloud.data;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
+
+import com.example.tacocloud.Ingredient;
 
 @Repository
 public class JdbcIngredientRepository implements IngredientRepository {
