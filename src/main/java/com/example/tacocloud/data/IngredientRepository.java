@@ -1,12 +1,15 @@
 package com.example.tacocloud.data;
 
+import org.springframework.data.repository.CrudRepository;
+
 import com.example.tacocloud.Ingredient;
 
-public interface IngredientRepository {
+// JPA
+public interface IngredientRepository extends CrudRepository<Ingredient, String> {
     
-    Iterable<Ingredient> findAll();
+    // Iterable<Ingredient> findAll();
 
-    Ingredient findById(String id);
+    // Ingredient findById(String id);
 
-    Ingredient save(Ingredient ingredient);
+    // Ingredient save(Ingredient ingredient);
 }
