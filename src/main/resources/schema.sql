@@ -1,15 +1,18 @@
+drop table if exists Ingredient cascade;
 create table if not exists Ingredient (
     id varchar(4) not null primary key,
     name varchar(25) not null,
     type varchar(10) not null
 );
 
+drop table if exists Taco cascade;
 create table if not exists Taco (
     id identity,
     name varchar(50) not null,
     createdAt timestamp not null
 );
 
+drop table if exists Taco_Ingredients cascade;
 create table if not exists Taco_Ingredients (
     taco bigint not null,
     ingredient varchar(4) not null
@@ -20,6 +23,7 @@ alter table Taco_Ingredients
 alter table Taco_Ingredients
     add foreign key (ingredient) references Ingredient(id);
 
+drop table if exists Taco_Order cascade;
 create table if not exists Taco_Order (
     id identity,
     deliveryName varchar(50) not null,
@@ -33,6 +37,7 @@ create table if not exists Taco_Order (
     placedAt timestamp not null
 );
 
+drop table if exists Taco_Order_Tacos cascade;
 create table if not exists Taco_Order_Tacos (
     tacoOrder bigint not null,
     taco bigint not null
