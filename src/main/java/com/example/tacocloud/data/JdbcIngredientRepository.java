@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.tacocloud.Ingredient;
 
+// JDBC
 @Repository
 public class JdbcIngredientRepository implements IngredientRepository {
 
